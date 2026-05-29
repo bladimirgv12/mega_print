@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de trabajos realizados por MegaPrint - impresión y publicidad profesional.">
+  <title>Trabajos Realizados — MegaPrint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <section style="padding:8rem 0 4rem;background:linear-gradient(135deg,#0a0a0a,#0a0a1a);position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(251,191,36,.1),transparent 60%);pointer-events:none;"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="reveal">
+        <span class="section-badge" style="background:rgba(251,191,36,.1);border-color:rgba(251,191,36,.3);color:var(--color-yellow);">Portafolio</span>
+        <h1 class="section-title" style="margin-top:.75rem;">Trabajos <span class="highlight-fuchsia">Realizados</span></h1>
+        <p class="section-subtitle" style="margin:0;">Cada proyecto es una historia de éxito. Conoce algunos de nuestros mejores trabajos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section style="padding:2rem 0;background:var(--color-black-soft);border-bottom:1px solid var(--color-black-border);position:sticky;top:70px;z-index:100;backdrop-filter:blur(10px);">
+    <div class="container">
+      <div class="filter-chips" id="jobs-category-chips">
+        <button class="filter-chip active" data-id="">Todos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jobs Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-jobs" id="jobs-grid"></div>
+      <div id="jobs-pagination"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:5rem 0;background:var(--color-black-soft);">
+    <div class="container" style="text-align:center;">
+      <div class="reveal">
+        <h2 style="font-size:2rem;font-weight:800;margin-bottom:1rem;">¿Quieres ser parte de <span class="highlight-yellow">nuestro portafolio</span>?</h2>
+        <p style="color:rgba(255,255,255,.6);margin-bottom:2rem;">Contáctanos y hagamos juntos tu próximo proyecto de impresión.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Contáctanos ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/jobs.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => { Jobs.init(); });
+  </script>
+</body>
+</html>

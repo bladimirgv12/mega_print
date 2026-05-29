@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce a MegaPrint - historia, misión, visión y el equipo detrás del mejor servicio de impresión en Bolivia.">
+  <title>Nosotros — MegaPrint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <!-- Hero -->
+  <section style="padding:8rem 0 4rem;background:linear-gradient(135deg,#0a0a0a,#1a0a12);position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(233,30,140,.15),transparent 50%);pointer-events:none;"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="reveal">
+        <span class="section-badge">Nuestra Historia</span>
+        <h1 class="section-title" style="margin-top:.75rem;">Somos <span class="highlight-fuchsia">MegaPrint</span></h1>
+        <p class="section-subtitle" style="margin:0;max-width:700px;">Más de 10 años haciendo realidad las ideas de nuestros clientes con pasión, tecnología de punta y los mejores materiales del mercado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About sections (dynamic) -->
+  <section class="section">
+    <div class="container" id="about-dynamic-content">
+      <div style="display:flex;align-items:center;justify-content:center;padding:4rem;">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Static Fallback: Historia, Misión, Visión, Valores -->
+  <section class="section" style="background:var(--color-black-soft);">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+        <div class="reveal-left">
+          <span class="section-badge">Nuestra Historia</span>
+          <h2 class="section-title" style="margin-top:.75rem;font-size:2rem;">Desde el <span class="highlight-yellow">2013</span></h2>
+          <p style="color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:1rem;">
+            MegaPrint nació con una visión clara: brindar servicios de impresión y publicidad de la más alta calidad en Bolivia. Comenzamos con una pequeña máquina y grandes sueños.
+          </p>
+          <p style="color:rgba(255,255,255,.7);line-height:1.9;">
+            Hoy contamos con tecnología de última generación, un equipo apasionado y la confianza de más de 500 clientes satisfechos que han confiado en nosotros para dar vida a sus proyectos.
+          </p>
+        </div>
+        <div class="reveal-right" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          ${[
+            {n:'10+',l:'Años de experiencia',c:'var(--color-yellow)'},
+            {n:'500+',l:'Clientes satisfechos',c:'var(--color-fuchsia)'},
+            {n:'50+',l:'Tipos de productos',c:'#4ade80'},
+            {n:'24h',l:'Entrega express',c:'#60a5fa'},
+          ].map(s => `
+            <div style="background:var(--gradient-card);border:1px solid var(--color-black-border);border-radius:var(--radius-lg);padding:1.5rem;text-align:center;">
+              <div style="font-size:2rem;font-weight:900;color:${s.c};">${s.n}</div>
+              <div style="font-size:.8rem;color:rgba(255,255,255,.5);margin-top:.25rem;">${s.l}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión, Visión, Valores -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Nuestra Esencia</span>
+        <h2 class="section-title">Lo que nos <span class="highlight-yellow">define</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+        <div class="card reveal" style="padding:2rem;">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">🎯</div>
+          <h3 style="font-size:1.2rem;font-weight:700;color:var(--color-fuchsia);margin-bottom:.75rem;">Misión</h3>
+          <p style="color:rgba(255,255,255,.7);line-height:1.8;">Proveer soluciones de impresión y publicidad de calidad excepcional, ayudando a nuestros clientes a comunicar su marca de manera impactante y memorable.</p>
+        </div>
+        <div class="card reveal delay-200" style="padding:2rem;">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">🔭</div>
+          <h3 style="font-size:1.2rem;font-weight:700;color:var(--color-yellow);margin-bottom:.75rem;">Visión</h3>
+          <p style="color:rgba(255,255,255,.7);line-height:1.8;">Ser la empresa líder en impresión y publicidad en Bolivia, reconocida por nuestra innovación, calidad superior y servicio al cliente inigualable.</p>
+        </div>
+        <div class="card reveal delay-400" style="padding:2rem;">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">💎</div>
+          <h3 style="font-size:1.2rem;font-weight:700;color:#4ade80;margin-bottom:.75rem;">Valores</h3>
+          <ul style="display:flex;flex-direction:column;gap:.5rem;">
+            ${['✓ Calidad sin compromisos','✓ Honestidad y transparencia','✓ Innovación constante','✓ Responsabilidad y puntualidad','✓ Pasión por el cliente'].map(v => `
+              <li style="color:rgba(255,255,255,.7);font-size:.875rem;">${v}</li>
+            `).join('')}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section" style="background:var(--color-black-soft);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">El Equipo</span>
+        <h2 class="section-title">Las personas detrás de <span class="highlight-fuchsia">MegaPrint</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.5rem;" id="team-grid">
+        ${[
+          {name:'Carlos Mendoza',role:'Director & Fundador',emoji:'👨‍💼'},
+          {name:'María López',role:'Diseñadora Senior',emoji:'👩‍🎨'},
+          {name:'Jorge Quispe',role:'Técnico de Impresión',emoji:'👨‍🔧'},
+          {name:'Ana Torres',role:'Atención al Cliente',emoji:'👩‍💻'},
+        ].map((m, i) => `
+          <div class="card reveal delay-${(i+1)*100}" style="padding:2rem;text-align:center;">
+            <div style="width:80px;height:80px;border-radius:50%;background:var(--gradient-accent);display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 1rem;">${m.emoji}</div>
+            <h3 style="font-weight:700;margin-bottom:.25rem;">${m.name}</h3>
+            <p style="font-size:.825rem;color:var(--color-fuchsia);">${m.role}</p>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:5rem 0;">
+    <div class="container" style="text-align:center;">
+      <div class="reveal">
+        <h2 style="font-size:2rem;font-weight:800;margin-bottom:1rem;">¿Quieres trabajar con <span class="highlight-yellow">nosotros</span>?</h2>
+        <p style="color:rgba(255,255,255,.6);margin-bottom:2rem;">Estamos listos para hacer realidad tu próximo proyecto.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Contáctanos →</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script>
+    async function loadAbout() {
+      const container = document.getElementById('about-dynamic-content');
+      try {
+        const res = await API.About.getAll();
+        const sections = res.data || res;
+        if (!sections || !sections.length) {
+          container.style.display = 'none';
+          return;
+        }
+        container.innerHTML = sections.map((s, i) => `
+          <div style="display:grid;grid-template-columns:${i%2===0?'1fr 1fr':'1fr 1fr'};gap:4rem;align-items:center;margin-bottom:5rem;${i%2!==0?'direction:rtl;':''}" class="reveal">
+            ${s.image ? `<img src="${API.getImageUrl(s.image)}" alt="${s.title}" style="border-radius:var(--radius-xl);width:100%;aspect-ratio:4/3;object-fit:cover;${i%2!==0?'direction:ltr;':''}">` : ''}
+            <div style="${i%2!==0?'direction:ltr;':''}">
+              <span class="badge badge-fuchsia" style="margin-bottom:.75rem;">${s.type || 'Sección'}</span>
+              <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:1rem;">${s.title}</h2>
+              <p style="color:rgba(255,255,255,.7);line-height:1.9;">${s.content}</p>
+            </div>
+          </div>
+        `).join('');
+        ScrollReveal.init();
+      } catch (err) {
+        container.style.display = 'none';
+      }
+    }
+    document.addEventListener('DOMContentLoaded', loadAbout);
+  </script>
+</body>
+</html>
