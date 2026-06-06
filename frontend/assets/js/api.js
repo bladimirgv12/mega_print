@@ -169,7 +169,7 @@ const AuthAPI = {
 
 // ── Image URL Helper ──
 function getImageUrl(path) {
-  if (!path) return 'assets/images/placeholder.jpg';
+  if (!path) return 'assets/images/hero-bg.png';
   if (path.startsWith('http')) return path;
   return `${API_CONFIG.baseURL.replace('/api', '')}/storage/${path}`;
 }

@@ -200,39 +200,21 @@
   <!-- ══════════════════════════════
        POR QUÉ ELEGIRNOS
   ══════════════════════════════ -->
-  <section class="section" style="background:var(--color-black-soft);">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-badge"
-          style="background:rgba(251,191,36,.1);border-color:rgba(251,191,36,.3);color:var(--color-yellow);">VENTAJAS</span>
-        <h2 class="section-title" style="color:black">¿Por qué elegir <span class="highlight-yellow">MegaPrint</span>?
-        </h2>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;">
-        ${[
-        {icon:'⚡',title:'Rapidez',desc:'Entregas express en 24 horas. Tu tiempo es valioso y lo
-        respetamos.',color:'var(--color-yellow)'},
-        {icon:'🎨',title:'Calidad Premium',desc:'Materiales de primera categoría y equipos de última
-        generación.',color:'var(--color-fuchsia)'},
-        {icon:'💰',title:'Mejor Precio',desc:'Precios competitivos sin sacrificar la calidad. Cotización sin
-        compromiso.',color:'#4ade80'},
-        {icon:'🤝',title:'Asesoría Gratis',desc:'Nuestro equipo te ayuda a elegir la mejor opción para tu
-        proyecto.',color:'#60a5fa'},
-        {icon:'🏆',title:'Garantía Total',desc:'Si no quedas satisfecho, lo rehacemos. Tu satisfacción es nuestra
-        prioridad.',color:'var(--color-yellow)'},
-        {icon:'📱',title:'Atención 24/7',desc:'Disponibles por WhatsApp todo el día para responder tus
-        dudas.',color:'#4ade80'},
-        ].map((f,i) => `
-        <div class="card reveal delay-${(i%3+1)*100}" style="padding:2rem;">
-          <div style="font-size:2.5rem;margin-bottom:1rem;">${f.icon}</div>
-          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:${f.color};">${f.title}</h3>
-          <p style="color:var(--color-white-muted);font-size:.875rem;line-height:1.7;">${f.desc}</p>
-        </div>
-        `).join('')}
-      </div>
-    </div>
-  </section>
 
+      <section class="section" style="background:var(--color-black-soft);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge">VENTAJAS</span>
+          <h2 class="section-title" style="color:white">
+            ¿Por qué elegir <span class="highlight-yellow">MegaPrint</span>?
+          </h2>
+        </div>
+
+        <div id="features-container"
+          style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;">
+        </div>
+      </div>
+    </section>
   <!-- ══════════════════════════════
        TESTIMONIOS
   ══════════════════════════════ -->
@@ -305,6 +287,30 @@
       Testimonials.loadSlider();
     });
   </script>
+   <script>
+    const features = [
+      {icon:'⚡',title:'Rapidez',desc:'Entregas express en 24 horas. Tu tiempo es valioso y lo respetamos.',color:'var(--color-yellow)'},
+      {icon:'🎨',title:'Calidad Premium',desc:'Materiales de primera categoría y equipos de última generación.',color:'var(--color-fuchsia)'},
+      {icon:'💰',title:'Mejor Precio',desc:'Precios competitivos sin sacrificar la calidad. Cotización sin compromiso.',color:'#4ade80'},
+      {icon:'🤝',title:'Asesoría Gratis',desc:'Nuestro equipo te ayuda a elegir la mejor opción para tu proyecto.',color:'#60a5fa'},
+      {icon:'🏆',title:'Garantía Total',desc:'Si no quedas satisfecho, lo rehacemos. Tu satisfacción es nuestra prioridad.',color:'var(--color-yellow)'},
+      {icon:'📱',title:'Atención 24/7',desc:'Disponibles por WhatsApp todo el día para responder tus dudas.',color:'#4ade80'},
+    ];
+
+    document.getElementById('features-container').innerHTML =
+      features.map((f, i) => `
+        <div class="card reveal delay-${(i%3+1)*100}" style="padding:2rem;">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">${f.icon}</div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;color:${f.color};">
+            ${f.title}
+          </h3>
+          <p style="color:var(--color-white-muted);font-size:.875rem;line-height:1.7;">
+            ${f.desc}
+          </p>
+        </div>
+      `).join('');
+    </script>
+
 </body>
 
 </html>
