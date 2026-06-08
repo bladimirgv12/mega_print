@@ -254,6 +254,17 @@ img {
   color: var(--color-black);
 }
 
+.btn-outline-red {
+  background: transparent;
+  color: #ff3131;
+  border: 1px solid #ff2d2d;
+}
+
+.btn-outline-red:hover {
+  background: #ff3939;
+  color: var(--color-black);
+}
+
 .btn-ghost {
   background: rgba(255, 255, 255, 0.05);
   color: var(--color-white);
@@ -371,9 +382,10 @@ img {
 }
 
 .navbar-logo-img {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-sm);
+  height: 70px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .navbar-logo-text {
@@ -525,7 +537,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.90;
+  opacity: 1.0;
   z-index: 0;
 }
 
@@ -534,7 +546,7 @@ img {
   inset: 0;
   background: linear-gradient(135deg,
       rgba(10, 10, 10, 0.95) 0%,
-      rgba(26, 10, 18, 0.85) 50%,
+      rgba(0, 0, 0, 0.85) 50%,
       rgba(10, 10, 10, 0.95) 100%);
   z-index: 1;
 }

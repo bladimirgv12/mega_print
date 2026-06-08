@@ -21,7 +21,11 @@
       <nav class="navbar" id="main-navbar">
         <div class="navbar-inner">
           <a href="index.html" class="navbar-logo">
-            <span class="navbar-logo-text">MEGA<span style="color:var(--color-yellow)">PRINT salcaja</span></span>
+            <img
+              src="assets/images/logo-megaprint.jpg"
+              alt="MegaPrint Salcajá"
+              class="navbar-logo-img"
+            >
           </a>
 
           <ul class="navbar-nav">
