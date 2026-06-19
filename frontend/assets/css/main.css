@@ -22,16 +22,16 @@
   --color-yellow-glow: rgba(251, 191, 36, 0.3);
 
   /* Fuchsia / Neon */
-  --color-fuchsia: #e91e8c;
-  --color-fuchsia-bright: #ff2d9b;
-  --color-fuchsia-dark: #c2185b;
-  --color-fuchsia-glow: rgba(233, 30, 140, 0.3);
+  --color-fuchsia: #3b82f6;
+  --color-fuchsia-bright: #60a5fa;
+  --color-fuchsia-dark: #2563eb;
+  --color-fuchsia-glow: rgba(59, 130, 246, 0.3);
 
   /* Gradients */
   --gradient-hero: linear-gradient(135deg, #0a0a0a 0%, #1a0a12 50%, #0a0a0a 100%);
   --gradient-card: linear-gradient(145deg, #1a1a1a, #111111);
   --gradient-yellow: linear-gradient(135deg, #fbbf24, #f59e0b);
-  --gradient-fuchsia: linear-gradient(135deg, #ff2d9b, #e91e8c);
+  --gradient-fuchsia: linear-gradient(135deg, #60a5fa, #2563eb);
   --gradient-accent: linear-gradient(135deg, #fbbf24 0%, #e91e8c 100%);
 
   /* Typography */
@@ -52,7 +52,7 @@
   /* Shadows */
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
   --shadow-glow-yellow: 0 0 30px rgba(251, 191, 36, 0.4);
-  --shadow-glow-fuchsia: 0 0 30px rgba(233, 30, 140, 0.4);
+  --shadow-glow-fuchsia: 0 0 30px rgba(59, 130, 246, 0.4);
   --shadow-glow-accent: 0 0 40px rgba(233, 30, 140, 0.2), 0 0 80px rgba(251, 191, 36, 0.1);
 
   /* Transitions */
@@ -820,6 +820,16 @@ select.form-control option {
 .footer-bottom p {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-brand {
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
 }
 
 /* ── Toast ── */

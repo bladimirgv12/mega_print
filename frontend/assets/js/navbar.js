@@ -111,11 +111,11 @@
           <div class="footer-grid">
             <!-- Brand -->
             <div>
-              <div class="footer-brand-text">MEGAPRINT</div>
+              <div class="footer-brand">
+                <img src="assets/images/logo-megaprint.jpg" alt="MegaPrint" class="footer-logo">
+              </div>
               <p class="footer-desc">
-                Tu aliado en impresión y publicidad profesional. 
-                Hacemos realidad tus ideas con calidad premium 
-                y los mejores tiempos de entrega.
+                Tu centro de impresión!
               </p>
               <div class="footer-social">
                 <a href="#" class="social-btn" aria-label="Facebook">
