@@ -211,7 +211,7 @@ img {
 }
 
 .btn-primary {
-  background: var(--gradient-accent);
+  background: #ffd400;
   color: var(--color-white);
   box-shadow: 0 4px 20px var(--color-yellow-glow);
 }
@@ -391,7 +391,7 @@ img {
 .navbar-logo-text {
   font-size: 1.5rem;
   font-weight: 900;
-  background: var(--gradient-accent);
+  background: #ffd400;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -420,7 +420,7 @@ img {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--gradient-accent);
+  background: #ffd400;
   border-radius: var(--radius-full);
   transition: width var(--transition-normal);
 }
@@ -719,7 +719,7 @@ select.form-control option {
 .footer-brand-text {
   font-size: 1.75rem;
   font-weight: 900;
-  background: var(--gradient-accent);
+  background: var(--color-yellow);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
